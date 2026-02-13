@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "compose": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml up -d",
+    "compose-down": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml down",
+    "inicio": "npm run compose && npm run dev"
   },
   "dependencies": {
     "@prisma/client": "^7.3.0",
